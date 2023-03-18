@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1e1db47-4c23-4908-899d-5f5761fff418" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LAB_1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MD/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MD/MyTableModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MD/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MD/data/Administration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MD/data/Group.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MD/data/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MD/data/Worker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MD/view/MainWindow.java" afterDir="false" />
-    </list>
+    <list default="true" id="a1e1db47-4c23-4908-899d-5f5761fff418" name="Changes" comment="version 1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,6 +44,14 @@
       <option name="presentableId" value="Default" />
       <updated>1679136251717</updated>
     </task>
+    <task id="LOCAL-00001" summary="version 1">
+      <created>1679136631727</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679136631727</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -72,5 +64,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="version 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 1" />
   </component>
 </project>
