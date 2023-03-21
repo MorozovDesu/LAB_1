@@ -35,12 +35,14 @@ public class MainWindow extends JFrame {
         buttonDelete.addActionListener((e) -> {
             try {
                 this.myTableModel.delete(this.jTable.getSelectedRow());
-            } catch (IndexOutOfBoundsException var4) {
+            } catch (IndexOutOfBoundsException exception) {
                 JDialog jDialog = new JDialog(this, "Выделите строку", true);
+                setResizable(true);
+                jDialog.setSize(200, 50);
+                pack();
                 jDialog.setLocationRelativeTo((Component)null);
                 jDialog.setVisible(true);
             }
-
         });
         String[] group = new String[]{"Worker", "Administration", "Teacher"};
         this.groupType = new JComboBox(group);

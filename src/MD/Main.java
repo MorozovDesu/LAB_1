@@ -8,7 +8,6 @@ import MD.view.MainWindow;
 public class Main {
     public Main() {
     }
-
     public static void main(String[] args) {
         State.GROUPS.add(new Administration("Олег"));
         State.GROUPS.add(new Worker("Вася"));

@@ -8,19 +8,15 @@ import javax.swing.table.AbstractTableModel;
 
 public class MyTableModel extends AbstractTableModel {
     private final Group data;
-
     public MyTableModel(Group group) {
         this.data = group;
     }
-
     public int getRowCount() {
         return this.data.getCount();
     }
-
     public int getColumnCount() {
         return 2;
     }
-
     public String getColumnName(int column) {
         switch (column) {
             case 0:
@@ -31,7 +27,6 @@ public class MyTableModel extends AbstractTableModel {
                 return "";
         }
     }
-
     public Object getValueAt(int rowIndex, int columnIndex) {
         switch (columnIndex) {
             case 0:
@@ -44,19 +39,16 @@ public class MyTableModel extends AbstractTableModel {
                     if (org instanceof Worker) {
                         return "Worker";
                     }
-
                     return "Teacher";
                 }
             default:
                 return "default";
         }
     }
-
     public void delete(int ind) {
         State.deleteSelectedCompany(ind);
         this.fireTableDataChanged();
     }
-
     public void add(String name, String ind) {
         switch (ind) {
             case "Worker":
@@ -71,10 +63,8 @@ public class MyTableModel extends AbstractTableModel {
             default:
                 State.GROUPS.add(new Teacher("default"));
         }
-
         this.fireTableDataChanged();
     }
-
     public String doActivity(int ind) {
         return State.doSelectedActivity(ind);
     }

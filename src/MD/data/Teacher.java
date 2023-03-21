@@ -4,13 +4,11 @@ public class Teacher extends Group {
     public Teacher(String name) {
         super(name);
     }
-
-    private String craftAirPlane() {
+    private int trainTheApprentice() {
         return this.getObjetName();
     }
-
     public String processOperation() {
-        String var10000 = this.getName();
-        return "Авиастроительная компания под названием " + var10000 + " построила самолет с ID: " + this.craftAirPlane();
+        String name = this.getName();
+        return " Учитель с именем " + name + " поставил оценку ученику с ID: " + this.trainTheApprentice();
     }
 }

@@ -4,13 +4,11 @@ public class Administration extends Group {
     public Administration(String name) {
         super(name);
     }
-
-    private String insuranceHuman() {
+    private int registrHuman() {
         return this.getObjetName();
     }
-
     public String processOperation() {
-        String var10000 = this.getName();
-        return " Страховая компания под названием " + var10000 + " застраховала человека с ID: " + this.insuranceHuman();
+        String name = this.getName();
+        return " Администратор с именем " + name + " зарегистрировал человека с ID: " + this.registrHuman();
     }
 }
