@@ -7,6 +7,7 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
@@ -34,15 +35,12 @@ public class MainWindow extends JFrame {
         JButton buttonDelete = new JButton("Удалить сотрудника");
         buttonDelete.addActionListener((e) -> {
             try {
-                this.myTableModel.delete(this.jTable.getSelectedRow());
-            } catch (IndexOutOfBoundsException exception) {
-                JDialog jDialog = new JDialog(this, "Выделите строку", true);
-                setResizable(true);
-                jDialog.setSize(200, 50);
-                pack();
-                jDialog.setLocationRelativeTo((Component)null);
-                jDialog.setVisible(true);
-            }
+                if (this.jTable.getSelectedRow() != -1) {
+                    this.myTableModel.delete(this.jTable.getSelectedRow());
+                } else if (this.myTableModel.getRowCount() > 0) {
+                    this.myTableModel.delete(this.myTableModel.getRowCount() - 1);
+                }
+            } catch (IndexOutOfBoundsException ignored  ) { }
         });
         String[] group = new String[]{"Worker", "Administration", "Teacher"};
         this.groupType = new JComboBox(group);
@@ -50,7 +48,7 @@ public class MainWindow extends JFrame {
         this.nameField.setText("Имя сотрудника");
         JButton buttonAdd = new JButton("Добавить сотрудника");
         buttonAdd.addActionListener((e) -> {
-            String type = this.groupType.getSelectedItem().toString();
+            String type = Objects.requireNonNull(this.groupType.getSelectedItem()).toString();
             this.myTableModel.add(this.nameField.getText(), type);
         });
         JButton doAct = new JButton("Выполнить действие");
@@ -70,10 +68,13 @@ public class MainWindow extends JFrame {
         panel.add(this.groupType);
         panel.add(this.nameField);
         panel.add(buttonDelete);
+
+
         panelR.add(doAct);
         panelR.add(this.actField);
-        this.add(panelR, "North");
-        this.add(panel, "South");
+        this.add(panelR, "South");
+
+        this.add(panel, "North");
         this.setLocationRelativeTo((Component)null);
         this.pack();
         this.setVisible(true);
