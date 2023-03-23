@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1e1db47-4c23-4908-899d-5f5761fff418" name="Changes" comment="version final">
+    <list default="true" id="a1e1db47-4c23-4908-899d-5f5761fff418" name="Changes" comment="Delete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MD/MyTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/MyTableModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MD/view/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/view/MainWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679366986396</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Delete">
+      <created>1679474040718</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679474040718</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,6 +94,7 @@
     <MESSAGE value="version 1" />
     <MESSAGE value="version 1/1" />
     <MESSAGE value="version final" />
-    <option name="LAST_COMMIT_MESSAGE" value="version final" />
+    <MESSAGE value="Delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete" />
   </component>
 </project>

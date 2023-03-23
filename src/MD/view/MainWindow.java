@@ -8,14 +8,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Objects;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 public class MainWindow extends JFrame {
     private final JTable jTable = new JTable();
@@ -68,6 +61,23 @@ public class MainWindow extends JFrame {
         panel.add(this.groupType);
         panel.add(this.nameField);
         panel.add(buttonDelete);
+
+        JComboBox<String> filterComboBox = new JComboBox<>(new String[]{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"});
+
+        filterComboBox.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String selectedLetter = (String) filterComboBox.getSelectedItem();
+                myTableModel.filterByLetter(selectedLetter);
+            }
+        });
+
+        JPanel filterPanel = new JPanel();
+        filterPanel.setLayout(new FlowLayout());
+        filterPanel.add(new JLabel("Фильтр по букве:"));
+        filterPanel.add(filterComboBox);
+
+        panel.add(filterPanel, "West");
+
 
 
         panelR.add(doAct);

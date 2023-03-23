@@ -68,4 +68,10 @@ public class MyTableModel extends AbstractTableModel {
     public String doActivity(int ind) {
         return State.doSelectedActivity(ind);
     }
+
+    public void setFilter(String filterText) {
+    }
+
+    public void filterByLetter(String selectedLetter) {
+    }
 }
