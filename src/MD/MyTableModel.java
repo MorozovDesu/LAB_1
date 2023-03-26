@@ -46,32 +46,30 @@ public class MyTableModel extends AbstractTableModel {
         }
     }
     public void delete(int ind) {
-        State.deleteSelectedCompany(ind);
+        Status.deleteSelectedCompany(ind);
         this.fireTableDataChanged();
     }
     public void add(String name, String ind) {
         switch (ind) {
             case "Worker":
-                State.GROUPS.add(new Worker(name));
+                Status.GROUPS.add(new Worker(name));
                 break;
             case "Administration":
-                State.GROUPS.add(new Administration(name));
+                Status.GROUPS.add(new Administration(name));
                 break;
             case "Teacher":
-                State.GROUPS.add(new Teacher(name));
+                Status.GROUPS.add(new Teacher(name));
                 break;
             default:
-                State.GROUPS.add(new Teacher("default"));
+                Status.GROUPS.add(new Teacher("default"));
         }
         this.fireTableDataChanged();
     }
     public String doActivity(int ind) {
-        return State.doSelectedActivity(ind);
+        return Status.doSelectedActivity(ind);
     }
 
-    public void setFilter(String filterText) {
-    }
-
-    public void filterByLetter(String selectedLetter) {
+    public String find(String name){
+        return Status.findAct(name);
     }
 }

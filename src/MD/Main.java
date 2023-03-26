@@ -9,9 +9,9 @@ public class Main {
     public Main() {
     }
     public static void main(String[] args) {
-        State.GROUPS.add(new Administration("Олег"));
-        State.GROUPS.add(new Worker("Вася"));
-        State.GROUPS.add(new Teacher("Яна"));
+        Status.GROUPS.add(new Administration("Олег"));
+        Status.GROUPS.add(new Worker("Вася"));
+        Status.GROUPS.add(new Teacher("Яна"));
         new MainWindow();
     }
 }

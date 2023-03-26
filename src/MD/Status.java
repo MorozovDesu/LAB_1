@@ -2,14 +2,12 @@ package MD;
 
 import MD.data.Group;
 
-import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class State {
+public class Status {
     public static final ArrayList<Group> GROUPS = new ArrayList();
-    public State() {
+    public Status() {
     }
     public Group getGroup (int index) {
         return (Group)GROUPS.get(index);
@@ -19,8 +17,8 @@ public class State {
     }
     public static String doSelectedActivity(int ind) {
         try {
-            Group org = (Group)GROUPS.get(ind);
-            String name = org.getName();
+            Group grp = (Group)GROUPS.get(ind);
+            String name = grp.getName();
             Iterator var3 = GROUPS.iterator();
             Group group;
             while(true) {
@@ -41,25 +39,12 @@ public class State {
 
         return null;
     }
-    public static void doAllActivities() {
-        if (GROUPS.isEmpty()) {
-            System.out.println("бом бом...");
-        } else {
-            System.out.println();
-            Iterator var0 = GROUPS.iterator();
-
-            while(var0.hasNext()) {
-                Group group = (Group)var0.next();
-                group.processOperation();
+    public static String findAct(String name) {
+        for (Group group: GROUPS) {
+            if (group.getName() == null ? name == null : group.getName().equals(name)) {
+                return group.processOperation();
             }
-            System.out.println();
         }
-    }
-    public static void getGroupList() {
-        System.out.println();
-        for(int i = 0; i < GROUPS.size(); ++i) {
-            System.out.println(i + 1 + " - " + ((Group)GROUPS.get(i)).getName());
-        }
-        System.out.println();
+        return ("Человека с таким именем нет");
     }
 }

@@ -1,6 +1,6 @@
 package MD.data;
 
-import MD.State;
+import MD.Status;
 import java.util.Random;
 
 public abstract class Group {
@@ -16,10 +16,10 @@ public abstract class Group {
         return random.nextInt(999);
     }
     public int getCount() {
-        return State.GROUPS.size();
+        return Status.GROUPS.size();
     }
     public Group getOrganization(int index) {
-        return (Group)State.GROUPS.get(index);
+        return (Group) Status.GROUPS.get(index);
     }
     public abstract String processOperation();
 }

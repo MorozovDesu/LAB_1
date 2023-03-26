@@ -1,6 +1,7 @@
 package MD.view;
 
 import MD.MyTableModel;
+import MD.Status;
 import MD.data.Group;
 import java.awt.Component;
 import java.awt.FlowLayout;
@@ -9,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Objects;
 import javax.swing.*;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 public class MainWindow extends JFrame {
     private final JTable jTable = new JTable();
@@ -20,6 +22,7 @@ public class MainWindow extends JFrame {
     private final JTextField nameField;
     private final JComboBox groupType;
     private final JTextField actField;
+    Status status;
 
     public MainWindow() {
         super("Groups");
@@ -50,6 +53,13 @@ public class MainWindow extends JFrame {
                 MainWindow.this.actField.setText(MainWindow.this.myTableModel.doActivity(MainWindow.this.jTable.getSelectedRow()));
             }
         });
+        JButton find = new JButton("Поиск");
+        find.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MainWindow.this.actField.setText(MainWindow.this.myTableModel.find(nameField.getText()));
+            }
+        });
         this.actField = new JTextField("Выполненное действие");
         this.actField.setEditable(false);
         JPanel panel = new JPanel();
@@ -58,32 +68,13 @@ public class MainWindow extends JFrame {
         panel.setLayout(new FlowLayout());
         panelR.setLayout(new GridLayout(2, 1));
         panel.add(buttonAdd);
+        panel.add(find);
         panel.add(this.groupType);
         panel.add(this.nameField);
         panel.add(buttonDelete);
-
-        JComboBox<String> filterComboBox = new JComboBox<>(new String[]{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"});
-
-        filterComboBox.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                String selectedLetter = (String) filterComboBox.getSelectedItem();
-                myTableModel.filterByLetter(selectedLetter);
-            }
-        });
-
-        JPanel filterPanel = new JPanel();
-        filterPanel.setLayout(new FlowLayout());
-        filterPanel.add(new JLabel("Фильтр по букве:"));
-        filterPanel.add(filterComboBox);
-
-        panel.add(filterPanel, "West");
-
-
-
         panelR.add(doAct);
         panelR.add(this.actField);
         this.add(panelR, "South");
-
         this.add(panel, "North");
         this.setLocationRelativeTo((Component)null);
         this.pack();

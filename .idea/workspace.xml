@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a1e1db47-4c23-4908-899d-5f5761fff418" name="Changes" comment="Delete">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MD/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MD/MyTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/MyTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MD/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MD/data/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/data/Group.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MD/view/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/view/MainWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
