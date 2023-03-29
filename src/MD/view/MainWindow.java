@@ -27,16 +27,21 @@ public class MainWindow extends JFrame {
     public MainWindow() {
         super("Groups");
         this.jTable.setModel(this.myTableModel);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         JScrollPane jScrollPane = new JScrollPane(this.jTable);
         JButton buttonDelete = new JButton("Удалить сотрудника");
-        buttonDelete.addActionListener((e) -> {
-            try {
-                if (this.jTable.getSelectedRow() != -1) {
-                    this.myTableModel.delete(this.jTable.getSelectedRow());
-                } else if (this.myTableModel.getRowCount() > 0) {
-                    this.myTableModel.delete(this.myTableModel.getRowCount() - 1);
+        buttonDelete.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    if (MainWindow.this.jTable.getSelectedRow() != -1) {
+                        MainWindow.this.myTableModel.delete(MainWindow.this.jTable.getSelectedRow());
+                    } else if (MainWindow.this.myTableModel.getRowCount() > 0) {
+                        MainWindow.this.myTableModel.delete(MainWindow.this.myTableModel.getRowCount() - 1);
+                    }
+                } catch (IndexOutOfBoundsException ignored) {
                 }
-            } catch (IndexOutOfBoundsException ignored  ) { }
+            }
         });
         String[] group = new String[]{"Worker", "Administration", "Teacher"};
         this.groupType = new JComboBox(group);
