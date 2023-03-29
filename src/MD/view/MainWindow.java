@@ -76,7 +76,7 @@ public class MainWindow extends JFrame {
         panelR.add(this.actField);
         this.add(panelR, "South");
         this.add(panel, "North");
-        this.setLocationRelativeTo((Component)null);
+        this.setLocationRelativeTo((Component) null);
         this.pack();
         this.setVisible(true);
     }

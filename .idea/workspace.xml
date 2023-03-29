@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1e1db47-4c23-4908-899d-5f5761fff418" name="Changes" comment="Delete">
+    <list default="true" id="a1e1db47-4c23-4908-899d-5f5761fff418" name="Changes" comment="не работающая сортировка">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MD/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MD/MyTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/MyTableModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MD/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MD/data/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/data/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MD/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/Status.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MD/view/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/view/MainWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +31,7 @@
   </component>
   <component name="ProjectId" id="2NBT0Q3U3I7CK6HiPLO5dl5WnGN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -85,6 +84,17 @@
     </task>
     <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

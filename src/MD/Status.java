@@ -39,7 +39,7 @@ public class Status {
 
         return null;
     }
-    public static String findAct(String name) {
+    public static String findName(String name) {
         for (Group group: GROUPS) {
             if (group.getName() == null ? name == null : group.getName().equals(name)) {
                 return group.processOperation();

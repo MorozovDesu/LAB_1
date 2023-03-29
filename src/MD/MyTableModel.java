@@ -70,6 +70,6 @@ public class MyTableModel extends AbstractTableModel {
     }
 
     public String find(String name){
-        return Status.findAct(name);
+        return Status.findName(name);
     }
 }
