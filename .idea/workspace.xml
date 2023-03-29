@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1e1db47-4c23-4908-899d-5f5761fff418" name="Changes" comment="la Finale">
+    <list default="true" id="a1e1db47-4c23-4908-899d-5f5761fff418" name="Changes" comment="la Finale 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MD/MyTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/MyTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MD/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/Status.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MD/view/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MD/view/MainWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680076310940</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="la Finale 2">
+      <created>1680077341243</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680077341243</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -137,6 +146,7 @@
     <MESSAGE value="version final" />
     <MESSAGE value="Delete" />
     <MESSAGE value="la Finale" />
-    <option name="LAST_COMMIT_MESSAGE" value="la Finale" />
+    <MESSAGE value="la Finale 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="la Finale 2" />
   </component>
 </project>

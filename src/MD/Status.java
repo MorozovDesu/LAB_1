@@ -12,7 +12,7 @@ public class Status {
     public Group getGroup (int index) {
         return (Group)GROUPS.get(index);
     }
-    public static void deleteSelectedCompany(int ind) {
+    public static void deleteSelectedPerson(int ind) {
         GROUPS.remove(ind);
     }
     public static String doSelectedActivity(int ind) {

@@ -15,6 +15,7 @@ import static javax.swing.JOptionPane.showMessageDialog;
 public class MainWindow extends JFrame {
     private final JTable jTable = new JTable();
     private final MyTableModel myTableModel = new MyTableModel(new Group("Cadres") {
+
         public String processOperation() {
             return null;
         }
@@ -48,9 +49,12 @@ public class MainWindow extends JFrame {
         this.nameField = new JTextField();
         this.nameField.setText("Имя сотрудника");
         JButton buttonAdd = new JButton("Добавить сотрудника");
-        buttonAdd.addActionListener((e) -> {
-            String type = Objects.requireNonNull(this.groupType.getSelectedItem()).toString();
-            this.myTableModel.add(this.nameField.getText(), type);
+        buttonAdd.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String type = Objects.requireNonNull(MainWindow.this.groupType.getSelectedItem()).toString();
+                MainWindow.this.myTableModel.add(MainWindow.this.nameField.getText(), type);
+            }
         });
         JButton doAct = new JButton("Выполнить действие");
         doAct.addActionListener(new ActionListener() {

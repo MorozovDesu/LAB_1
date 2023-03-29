@@ -46,7 +46,7 @@ public class MyTableModel extends AbstractTableModel {
         }
     }
     public void delete(int ind) {
-        Status.deleteSelectedCompany(ind);
+        Status.deleteSelectedPerson(ind);
         this.fireTableDataChanged();
     }
     public void add(String name, String ind) {
